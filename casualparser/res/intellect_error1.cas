@@ -1,0 +1,59 @@
+state  run {
+	before {
+		salo pivo vodka
+	}
+	
+	after {
+		salo pivo vodka
+	}
+	
+	in_process{
+		salo pivo vodka
+	}
+	
+	transitions
+	{
+		transition
+		{
+			state_name:stay;
+			bool_expr: yes AND want OR sex;
+		
+			process : { 
+				process1 process2 process3 
+			}
+		}
+	}
+	
+	
+};
+
+state = stay 
+{
+	before {
+		salo pivo vodka
+	}
+	
+	after 
+		salo pivo vodka
+	}
+	
+	in_process{
+		salo pivo vodka
+	}
+	
+	transitions{
+		transition
+		{
+			state_name:run;
+			bool_expr: yes AND want OR sex AND ( box );
+		
+			process : 
+			{ 
+				process1 process2 process3 
+			}
+		}
+	}
+	
+	
+};
+
